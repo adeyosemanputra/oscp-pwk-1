@@ -12,17 +12,22 @@ Ainsi, je ne suis pas polué par la configuration lorsque je travaille.
 ## Découvrir le réseau
 ### Nmap
 Nous pouvons utiliser nmap, qui est un outil rapide et puissant, pour découvrir le réseau. Pour ce faire, nous pouvons faire ceci :
+
 `user@kali:# nmap -v -sV 10.11.1.0-254 -oG network.txt`
 
 Et quand c'est finit, nous pouvons filtrer les résultats ainsi : 
+
 `user@kali:# grep Up network.txt | cut -d " " -f 2 > network_filtered.txt`
 
 Nous pouvons répéter ça pour les différents ports qui nous intéressent.
 
 ### Meterpreter
 Un autre moyen de scanner le réseau est d'utiliser meterpreter. L'avantage de cet outil est qu'il embarque une base de données. Nous pouvons requêter cette base ainfi de trouver facilement nos résultat par la suite.
+
 `user@kali:# msfdb init` ou `start` si nous l'avons déjà initialisée.
+
 `user@kali:# msfconsole`
+
 `msf > db_nmap -v -T 5 10.11.1.0-254` : attention, -T 5 est la vitesse de parcours la plus rapide. C'est un super moyen d'avoir rapidement des résultats, mais également afin d'être vite détecter sur un réseau
 `msf > services -p 161` pour avoir la liste des serveurs snmp qui ont été découvert lors de l'analyse. Mais, nous pouvons aussi les rechercher ainsi : `msf > services -S snmp`. A mon avis, l'avantage est que si un service a été trouvé sur un autre port, nous pourrons le voir à travers cette recherche.
 
