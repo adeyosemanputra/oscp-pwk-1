@@ -2,10 +2,12 @@
 Trucs et astuces pour le PWK de l'OSCP et pour la suite
 
 ## L'organisation
-Pour faire la formation et passer la certification PWK de l'OSCP, nous devons utiliser la distribution Kali Linux. Personnellement, ce n'est pas un problème car je l'utilise déjà régulièrement.
+Pour faire la formation et passer la certification PWK de l'OSCP, nous devons utiliser la distribution Kali Linux. 
+Personnellement, ce n'est pas un problème car je l'utilise déjà régulièrement.
 
 ### Workspaces
-Personnellement, j'utilise le premier workspace pour les outils de pentest. J'utilise le second pour tout ce qui relève de la configuration avec des terminaux pour le vpn, le client à distance pour windows7, un firefox pour revert les machines, etc. Ainsi, je ne suis pas polué par la configuration lorsque je travaille.
+Personnellement, j'utilise le premier workspace pour les outils de pentest. J'utilise le second pour tout ce qui relève de la configuration avec des terminaux pour le vpn, le client à distance pour windows7, un firefox pour revert les machines, etc.
+Ainsi, je ne suis pas polué par la configuration lorsque je travaille.
 
 ## Découvrir le réseau
 ### Nmap
