@@ -29,10 +29,13 @@ Un autre moyen de scanner le réseau est d'utiliser meterpreter. L'avantage de c
 `user@kali:# msfconsole`
 
 `msf > db_nmap -v -T 5 10.11.1.0-254` : attention, -T 5 est la vitesse de parcours la plus rapide. C'est un super moyen d'avoir rapidement des résultats, mais également afin d'être vite détecter sur un réseau
+
 `msf > services -p 161` pour avoir la liste des serveurs snmp qui ont été découvert lors de l'analyse. Mais, nous pouvons aussi les rechercher ainsi : `msf > services -S snmp`. A mon avis, l'avantage est que si un service a été trouvé sur un autre port, nous pourrons le voir à travers cette recherche.
 
 ## Trouver des vulnérabilités
 ### Nmap
 Et oui, nmap peut être utile pour chercher des vulnerabilités sur le réseau. Pour ce faire, il suffit de lancer une commande telque : 
+
 `user@kali: # namp --script=smb-vuln-ms07-029 XXX.XXX.XXX.XXX`
-Normalement, les scripts nmap se trouvent `/usr/share/nmap/scripts/`. Donc pour connaitre, les différents scirpts de vulnérabilités, il suffit d'utiliser la commande suivante : `ls /usr/share/nmap/scripts/*vuln*`
+Normalement, les scripts nmap se trouvent `/usr/share/nmap/scripts/`. Donc pour connaitre, les différents scripts de vulnérabilité, il suffit d'utiliser la commande suivante : 
+`ls /usr/share/nmap/scripts/*vuln*`
