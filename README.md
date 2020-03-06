@@ -37,5 +37,7 @@ Un autre moyen de scanner le réseau est d'utiliser meterpreter. L'avantage de c
 Et oui, nmap peut être utile pour chercher des vulnerabilités sur le réseau. Pour ce faire, il suffit de lancer une commande telque : 
 
 `user@kali: # namp --script=smb-vuln-ms07-029 XXX.XXX.XXX.XXX`
+
 Normalement, les scripts nmap se trouvent `/usr/share/nmap/scripts/`. Donc pour connaitre, les différents scripts de vulnérabilité, il suffit d'utiliser la commande suivante : 
+
 `ls /usr/share/nmap/scripts/*vuln*`
