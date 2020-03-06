@@ -11,10 +11,12 @@ Ainsi, je ne suis pas polué par la configuration lorsque je travaille.
 
 ## Découvrir le réseau
 ### Nmap
-Nous pouvons utiliser nmap, qui est un outil rapide et puissant, pour découvrir le réseau. Pour ce faire, nous pouvons faire ceci : 
+Nous pouvons utiliser nmap, qui est un outil rapide et puissant, pour découvrir le réseau. Pour ce faire, nous pouvons faire ceci :
 `user@kali:# nmap -v -sV 10.11.1.0-254 -oG network.txt`
-Et quand c'est finit, nosu pouvons filtrer les résultats ainsi : 
+
+Et quand c'est finit, nous pouvons filtrer les résultats ainsi : 
 `user@kali:# grep Up network.txt | cut -d " " -f 2 > network_filtered.txt`
+
 Nous pouvons répéter ça pour les différents ports qui nous intéressent.
 
 ### Meterpreter
